@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeFile="DepartmentsList.ascx.cs" Inherits="DepartmentsList" %>
 <asp:DataList ID="list" runat="server" Width="200px" CssClass="DepartmentListContent">
   <ItemTemplate>
-    &nbsp;&raquo;
+    <h1>>></h1>&nbsp;&raquo;
     <asp:HyperLink 
       ID="HyperLink1" 
       Runat="server" 

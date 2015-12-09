@@ -1,0 +1,6 @@
+User Name: COMP214F15_005_P_13
+Password: 
+
+Database host name: oracle1.centennialcollege.ca
+Port number: 1521
+Database service name: SQLD
