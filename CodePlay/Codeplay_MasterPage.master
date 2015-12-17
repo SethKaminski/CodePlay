@@ -1,7 +1,8 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CodeplayMasterPage.master.cs" Inherits="CodeplayMasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Codeplay_MasterPage.master.cs" Inherits="CodeplayMasterPage" %>
+
+<%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc2" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>The CodePlay</title>
@@ -46,16 +47,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="logo.jpg" width="60px" height="60px" /></a>
+                <a class="navbar-brand" href="CodePlay_Default.aspx"><img src="Images/logo.jpg" width="25px" height="25px" /></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="HtmlPage.html">HOME</a></li>
-                    <li class="active"><a href="AboutUs.html">ABOUT US <span class="sr-only">(current)</span></a></li>
+                    <li><a href="CodePlay_Default.aspx"> HOME </a></li>
+                    <li><a href="CodePlay_AboutUs.aspx"> ABOUT US <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> CATEGORIES <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="Action.html">Action</a></li>
                             <li><a href="Strategy.html">Strategy</a></li>
@@ -63,6 +64,8 @@
                             <li><a href="RPG.html">Role Playing</a></li>
                             <li><a href="Music.html">Music and Party</a></li>
                             <li><a href="Sports.html">Sports</a></li>
+
+                            <uc2:DepartmentsList ID="DepartmentsList1" runat="server" />
                         </ul>
                     </li>
                 </ul>
@@ -92,6 +95,5 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-
 </body>
 </html>
