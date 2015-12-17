@@ -22,8 +22,7 @@
           <uc2:DepartmentsList ID="DepartmentsList1" runat="server" />
           <br />
           <uc3:CategoriesList ID="CategoriesList1" runat="server" />
-          <uc4:SearchBox id="SearchBox1" runat="server">
-          </uc4:SearchBox>
+          <uc4:SearchBox id="SearchBox1" runat="server"></uc4:SearchBox>
           <br />
           <uc6:CartSummary ID="CartSummary1" runat="server" />
         </td>

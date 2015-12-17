@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Codeplay_MasterPage.master.cs" Inherits="CodeplayMasterPage" %>
 
+<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc4" %>
 <%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc2" %>
 
 <!DOCTYPE html>
@@ -37,6 +38,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form id="form2" runat="server">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,12 +71,14 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
+                <div class="navbar-form navbar-left" role="search">
+                    <!--<div class="form-group">
                         <input type="text" class="form-control" placeholder="Search">
                     </div>
-                    <button type="submit" class="btn btn-default">Search Game</button>
-                </form>
+                    <button type="submit" class="btn btn-default">Search Game</button>-->
+
+                    <uc4:SearchBox id="SearchBox1" runat="server"></uc4:SearchBox>
+                </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">YOUR CART</a></li>
                     <li class="dropdown">
@@ -88,11 +92,12 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <form id="form2" runat="server">
+    
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
         
         </asp:ContentPlaceHolder>
+
     </div>
     </form>
 </body>
